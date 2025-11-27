@@ -38,7 +38,7 @@ class LocalLLM:
         inputs = self.tokenizer(
             prompt,
             return_tensors="pt",
-            truncation=True,        # truncate long inputs
+            truncation=True,
             max_length=self.max_input_tokens,
         ).to(self.model.device)
 
@@ -50,4 +50,12 @@ class LocalLLM:
             top_p=self.top_p,
         )
 
-        return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+        # ---- FIX: always access sequences ----
+        if hasattr(outputs, "sequences"):
+            token_ids = outputs.sequences[0]
+        else:
+            token_ids = outputs[0]  # fallback
+
+        text = self.tokenizer.decode(token_ids, skip_special_tokens=True)
+
+        return text
