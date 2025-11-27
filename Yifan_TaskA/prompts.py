@@ -69,3 +69,45 @@ def build_taskA_prompt(task: Dict) -> str:
     parts.append("Answer:")
 
     return "\n".join(parts)
+
+
+def build_taskC_prompt(task: Dict, retrieved_docs:list=None) -> str:
+    """
+    create a complete input for LLM based on contexts
+    """
+
+    if retrieved_docs:
+        docs = "\n\nRetrieved Passages:\n" + "\n".join(
+            [f"[{i+1}] {doc}" for i, doc in enumerate(retrieved_docs)]
+        ) + "\n\n"
+
+    contexts = task.get("contexts", [])
+    history = task.get("history", [])
+    query = task.get("last_user_query", "")
+
+    context_block = format_contexts(contexts)
+    history_block = format_history(history)
+
+    system_instructions = (
+        "You are a helpful, factual assistant. "
+        "Use ONLY the reference passages to answer the user's final question. "
+        "If the passages do not contain the answer, say that you don't know.\n"
+    )
+
+    parts = [system_instructions]
+
+    parts.append(docs)
+
+    parts.append("Reference passages:\n")
+    parts.append(context_block)
+
+    if history_block:
+        parts.append("Conversation so far:\n")
+        parts.append(history_block)
+        parts.append("")
+
+    parts.append("Now answer the user's final question based on the passages above.\n")
+    parts.append(f"User's final question: {query}\n")
+    parts.append("Answer:")
+
+    return "\n".join(parts)
