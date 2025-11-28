@@ -81,33 +81,39 @@ def build_taskC_prompt(task: Dict, retrieved_docs:list=None) -> str:
             [f"[{i+1}] {doc}" for i, doc in enumerate(retrieved_docs)]
         ) + "\n\n"
 
-    contexts = task.get("contexts", [])
-    history = task.get("history", [])
-    query = task.get("last_user_query", "")
+    #contexts = task.get("contexts", [])
+    #history = task.get("history", [])
+    #query = task.get("last_user_query", "")
 
-    context_block = format_contexts(contexts)
-    history_block = format_history(history)
+    #context_block = format_contexts(contexts)
+    #history_block = format_history(history)
 
     system_instructions = (
-        "You are a helpful, factual assistant. "
-        "Use ONLY the reference passages to answer the user's final question. "
-        "If the passages do not contain the answer, say that you don't know.\n"
+        '''You are a helpful, factual assistant. 
+        INSTRUCTIONS:
+        - Answer the user question in 1–3 sentences.
+        - Give only the final answer.
+        - Do NOT provide explanations, reasoning steps, or background context.
+        - Do NOT repeat or summarize the provided documents.
+        - Do NOT mention the existence of documents.
+        - Do NOT cite, list, or refer to sources.
+        '''
     )
 
     parts = [system_instructions]
 
     parts.append(docs)
 
-    parts.append("Reference passages:\n")
-    parts.append(context_block)
+    #parts.append("Reference passages:\n")
+    #parts.append(context_block)
 
-    if history_block:
-        parts.append("Conversation so far:\n")
-        parts.append(history_block)
-        parts.append("")
+    #if history_block:
+     #   parts.append("Conversation so far:\n")
+      #  parts.append(history_block)
+       # parts.append("")
 
-    parts.append("Now answer the user's final question based on the passages above.\n")
-    parts.append(f"User's final question: {query}\n")
-    parts.append("Answer:")
+    #parts.append("Now answer the user's final question based on the passages above.\n")
+    #parts.append(f"User's final question: {query}\n")
+
 
     return "\n".join(parts)
