@@ -1,4 +1,4 @@
 .pg_env
-__pycache__/corpora/passage_level/clapnq.jsonl
+__pycache__/
 corpora/passage_level/clapnq.jsonl
 corpora/passage_level/cloud.jsonl
