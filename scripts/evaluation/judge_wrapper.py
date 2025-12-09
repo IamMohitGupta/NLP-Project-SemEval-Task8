@@ -49,7 +49,7 @@ class LocalLLM(LLM):
         if self.tokenizer.pad_token_id is None:
             self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
 
-        self.model = AutoModelForCausalLM.from_pretrained(mode_name_or_path,attn_implementation="flash_attention_2", device_map="auto",  torch_dtype="bfloat16", 
+        self.model = AutoModelForCausalLM.from_pretrained(mode_name_or_path, device_map="auto",  torch_dtype="bfloat16", 
                                                             load_in_4bit=True,
                                                             bnb_4bit_compute_dtype=torch.bfloat16,
                                                           )
