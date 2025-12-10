@@ -1,0 +1,103 @@
+{
+  "task": "Subtask B - Generation with Reference Passages (RAG)",
+  "total_tasks": 100,
+  "evaluation_timestamp": "2025-12-09T21:26:43.363921",
+  "metrics_summary": {
+    "Recall": {
+      "mean": 0.42896036373399987,
+      "std": 0.15054116099006054,
+      "min": 0.0147058824,
+      "max": 0.8571428571,
+      "median": 0.4250244379,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
+    },
+    "RougeL_stemFalse": {
+      "mean": 0.13638542314800003,
+      "std": 0.05817574605980253,
+      "min": 0.0220588235,
+      "max": 0.3858998145,
+      "median": 0.1321208215,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
+    },
+    "BertscoreP": {
+      "mean": -0.092044042592,
+      "std": 0.18749771141463697,
+      "min": -0.6571047902,
+      "max": 0.4736661315,
+      "median": -0.06126435285,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
+    },
+    "BertscoreR": {
+      "mean": 0.10302345756199999,
+      "std": 0.17006807565625162,
+      "min": -0.5405154228,
+      "max": 0.424308449,
+      "median": 0.11191482845,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
+    },
+    "BertKPrec": {
+      "mean": 0.04919688697699999,
+      "std": 0.13356311651192473,
+      "min": -0.3395603895,
+      "max": 0.8535092473,
+      "median": 0.05186551065,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
+    },
+    "Extractiveness_RougeL": {
+      "mean": 0.158363730639,
+      "std": 0.0842276607963252,
+      "min": 0.0079051383,
+      "max": 0.8447412354,
+      "median": 0.14811169145,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
+    },
+    "Length": {
+      "mean": 1958.23,
+      "std": 783.1741805626639,
+      "min": 39.0,
+      "max": 3130.0,
+      "median": 2150.0,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
+    },
+    "RB_agg": {
+      "mean": 0.26361923044700003,
+      "std": 0.08171335826850477,
+      "min": 0.0616271442,
+      "max": 0.5154730089,
+      "median": 0.26476993790000003,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
+    },
+    "idk_eval": {
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "median": null,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100,
+      "error": "ufunc 'add' did not contain a loop with signature matching types (dtype('<U32'), dtype('<U32')) -> None"
+    }
+  },
+  "model_used": "Qwen/Qwen2.5-0.5B-Instruct",
+  "retrieval_setting": "Reference RAG (top 5 passages)",
+  "warnings": [
+    "Error calculating stats for 'idk_eval': ufunc 'add' did not contain a loop with signature matching types (dtype('<U32'), dtype('<U32')) -> None"
+  ]
+}
