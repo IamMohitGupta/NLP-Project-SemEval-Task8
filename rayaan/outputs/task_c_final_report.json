@@ -1,153 +1,103 @@
 {
   "task": "Subtask C - Generation with Retrieved Passages (RAG)",
-  "total_tasks": 5,
-  "evaluation_timestamp": "2025-12-09T16:20:13.834411",
+  "total_tasks": 100,
+  "evaluation_timestamp": "2025-12-10T13:21:08.796390",
   "metrics_summary": {
     "Recall": {
-      "mean": 0.38225449156,
-      "std": 0.13248564043799027,
-      "min": 0.1916666667,
-      "max": 0.5555555556,
-      "median": 0.3673469388,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "mean": 0.407777982586,
+      "std": 0.14649603282253298,
+      "min": 0.0235294118,
+      "max": 0.6744186047,
+      "median": 0.3918849512,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
     },
     "RougeL_stemFalse": {
-      "mean": 0.08315628326,
-      "std": 0.05374723387392,
-      "min": 0.0274599542,
-      "max": 0.1766784452,
-      "median": 0.0698254364,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "mean": 0.13833653360200002,
+      "std": 0.07590705421105001,
+      "min": 0.0151898734,
+      "max": 0.5359477124,
+      "median": 0.12935224285,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
     },
     "BertscoreP": {
-      "mean": -0.44283747075999996,
-      "std": 0.1691361396347064,
-      "min": -0.771818459,
-      "max": -0.2927803397,
-      "median": -0.3927696943,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "mean": -0.11781695241,
+      "std": 0.2265386682789236,
+      "min": -0.7675028443,
+      "max": 0.4717970192,
+      "median": -0.07904552665,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
     },
     "BertscoreR": {
-      "mean": -0.12584016834,
-      "std": 0.17981166050807107,
-      "min": -0.4273666143,
-      "max": 0.0177779291,
-      "median": 0.0026002997,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "mean": 0.08363650846199999,
+      "std": 0.18352466277243026,
+      "min": -0.5771613717,
+      "max": 0.6824410558,
+      "median": 0.09640929100000001,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
     },
     "BertKPrec": {
-      "mean": -0.06246047878000001,
-      "std": 0.17254382594475579,
-      "min": -0.2752734721,
-      "max": 0.2182966471,
-      "median": -0.0391773582,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "mean": -0.007344725696,
+      "std": 0.21189776167412336,
+      "min": -0.5484535098,
+      "max": 0.7421123981,
+      "median": 0.0013744050000000002,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
     },
     "Extractiveness_RougeL": {
-      "mean": 0.0936599893,
-      "std": 0.05365345887488814,
+      "mean": 0.12009291794200001,
+      "std": 0.09385191848360133,
       "min": 0.0,
-      "max": 0.1530479896,
-      "median": 0.1205357143,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "max": 0.6086956522,
+      "median": 0.11606501435,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
     },
     "Length": {
-      "mean": 1820.6,
-      "std": 679.9934117327902,
-      "min": 997.0,
-      "max": 2767.0,
-      "median": 1473.0,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "mean": 1895.33,
+      "std": 786.8454620190677,
+      "min": 39.0,
+      "max": 3196.0,
+      "median": 1988.5,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
     },
     "RB_agg": {
-      "mean": 0.1656478649,
-      "std": 0.07689079338207412,
-      "min": 0.0743375709,
-      "max": 0.2907102589,
-      "median": 0.1673335177,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "mean": 0.261160228739,
+      "std": 0.10124755216153047,
+      "min": 0.0429397442,
+      "max": 0.7083590232,
+      "median": 0.25228557095000004,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100
     },
     "idk_eval": {
-      "mean": 0.3,
-      "std": 0.24494897427831783,
-      "min": 0.0,
-      "max": 0.5,
-      "median": 0.5,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
-    },
-    "RL_F": {
-      "mean": 0.0,
-      "std": 0.0,
-      "min": 0.0,
-      "max": 0.0,
-      "median": 0.0,
-      "count": 2,
-      "total_count": 5,
-      "valid_count": 2
-    },
-    "RB_llm": {
-      "mean": 0.5,
-      "std": 0.0,
-      "min": 0.5,
-      "max": 0.5,
-      "median": 0.5,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
-    },
-    "RL_F_idk": {
-      "mean": 0.0,
-      "std": 0.0,
-      "min": 0.0,
-      "max": 0.0,
-      "median": 0.0,
-      "count": 2,
-      "total_count": 5,
-      "valid_count": 2
-    },
-    "RB_llm_idk": {
-      "mean": 0.5,
-      "std": 0.0,
-      "min": 0.5,
-      "max": 0.5,
-      "median": 0.5,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
-    },
-    "RB_agg_idk": {
-      "mean": 0.1656478649,
-      "std": 0.07689079338207412,
-      "min": 0.0743375709,
-      "max": 0.2907102589,
-      "median": 0.1673335177,
-      "count": 5,
-      "total_count": 5,
-      "valid_count": 5
+      "mean": null,
+      "std": null,
+      "min": null,
+      "max": null,
+      "median": null,
+      "count": 100,
+      "total_count": 100,
+      "valid_count": 100,
+      "error": "ufunc 'add' did not contain a loop with signature matching types (dtype('<U32'), dtype('<U32')) -> None"
     }
   },
   "model_used": "Qwen/Qwen2.5-0.5B-Instruct",
   "retrieval_setting": "Full RAG (top 5 passages)",
   "warnings": [
-    "Metric 'RL_F' had 3 None values (ignored in stats)",
-    "Metric 'RL_F_idk' had 3 None values (ignored in stats)"
+    "Error calculating stats for 'idk_eval': ufunc 'add' did not contain a loop with signature matching types (dtype('<U32'), dtype('<U32')) -> None"
   ]
 }
